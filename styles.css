@@ -1,0 +1,28 @@
+.page-title {
+    width: 100%;
+    height: 8rem;
+    padding-top: 4rem;
+    background-color: #e6f8e98e;
+}
+
+.page-title h1 {
+    color: #0e1231;
+}
+
+.main-btn{
+  background-color: #1e177e;
+  color: white;
+}
+
+.main-btn:hover, .btn-container a:hover{
+    color: white;
+    background-color: #081C15;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn-icon {
+    width: 1.2rem;
+}
