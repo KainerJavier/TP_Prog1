@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+if (isset($_SESSION['usuario'])) {
+    $usuario = unserialize($_SESSION['usuario']);
+} else {
+    header('Location: index.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 
