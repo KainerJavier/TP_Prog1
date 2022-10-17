@@ -29,6 +29,12 @@ if (isset($_SESSION['usuario'])) {
     <div class="text-center">
         <h3>Busqueda de autos</h3>
         <br>
+        <?php
+        if (isset($_GET['mensaje'])) {
+            echo '<div id="mensaje" class="alert alert-primary text-center">
+                    <p>' . $_GET['mensaje'] . '</p></div>';
+        }
+        ?> 
         <form>
             <select class="form-select" name="añoCarro">
                 <option selected>Elegir año</option>
