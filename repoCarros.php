@@ -17,7 +17,7 @@ class repoCarros extends repositorio
 
         if ($query->execute()) {
             $listaCarros = array();
-            //Fetch da falso cuando ya no haya más campeones
+            //Fetch da falso cuando ya no haya más carros
             while ($query->fetch()) {
                 $listaCarros[] = new carro($id, $marca, $modelo, $año, $color);
             }
@@ -70,17 +70,6 @@ class repoCarros extends repositorio
         $q = "DELETE FROM carros WHERE id = ?";
         $query = self::$conexion->prepare($q);
         $query->bind_param("i", $id);
-
-        return ($query->execute());
-    }
-
-    public function editar(Campeon $campeon)
-    {
-        $id = $campeon->getId();
-        $calificacion = $campeon->getCalificacion();
-        $q = "UPDATE campeones SET calificacion = ? WHERE id = ?";
-        $query = self::$conexion->prepare($q);
-        $query->bind_param("ii", $calificacion, $id);
 
         return ($query->execute());
     }

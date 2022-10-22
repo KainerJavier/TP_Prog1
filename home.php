@@ -8,8 +8,8 @@ session_start();
 if (isset($_SESSION['usuario'])) {
     $usuario = unserialize($_SESSION['usuario']);
     $nomApe = $usuario->getNombreApellido();
-    $repoCampeon = new repoCarros();
-    $campeones = $repoCarros->getAll($usuario);
+    $repoCarro = new repoCarros();
+    $carro = $repoCarros->getAll($usuario);
 } else {
     header('Location: index.html');
 }

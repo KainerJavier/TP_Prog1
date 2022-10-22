@@ -27,7 +27,7 @@ if (isset($_SESSION['usuario'])) {
     </div>
     <br>
     <div class="text-center">
-        <h3>Busqueda de autos</h3>
+        <h3>Ingreso de autos</h3>
         <br>
         <?php
         if (isset($_GET['mensaje'])) {

@@ -8,10 +8,10 @@ session_start();
 
 if (isset($_SESSION['usuario'])) {
     $usuario = unserialize($_SESSION['usuario']);
-    //se crea el campeon
-    $campeon = new Campeon(null ,$_POST['marca'], $_POST['modelo'], $_POST['año'], $_POST['color'], $usuario);
-    $repoCampeon = new repoCarros();
-    $idCampeon = $repoCarro->create($carro);
+    //se crea el auto
+    $carro = new Carro(null ,$_POST['marca'], $_POST['modelo'], $_POST['año'], $_POST['color'], $usuario);
+    $repoCarro = new repoCarros();
+    $idCarro = $repoCarro->create($carro);
     if ($idCarro === false) {
         header('Location: home.php?mensaje=Error al crear auto');
     } else {

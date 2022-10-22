@@ -2,7 +2,7 @@
 require_once 'controladorSesion.php';
 
 if (isset($_POST['usuario']) && isset($_POST['clave'])) {
-    $cs = new ControladorSesion();
+    $cs = new controladorSesion();
     $result = $cs->create(
         $_POST['usuario'],
         $_POST['nombre'],

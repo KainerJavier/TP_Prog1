@@ -5,9 +5,9 @@ session_start();
 
 if (isset($_SESSION['usuario']) && isset($_GET['id'])) {
     $usuario = unserialize($_SESSION['usuario']);
-    $repoCampeon = new repoCarros();
-    $campeon = $repoCampeon->getOne($_GET['id']);
-    if ($repoCampeon->delete($campeon)) {
+    $repoCarros = new repoCarros();
+    $carro = $repoCarros->getOne($_GET['id']);
+    if ($repoCarros->delete($carro)) {
         $mensaje = "Auto eliminado con éxito";
     } else {
         $mensaje = "Error al eliminar el auto";
