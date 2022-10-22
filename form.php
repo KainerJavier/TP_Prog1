@@ -36,25 +36,10 @@ if (isset($_SESSION['usuario'])) {
         }
         ?> 
         <form>
-            <select class="form-select" name="añoCarro">
-                <option selected>Elegir año</option>
-                <option value="0km">0km</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2014-2018">2014-2018</option>
-                <option value="2010-2013">2010-2013</option>
-                <option value="_-2009">_-2009</option>
-            </select><br>
-            <select class="form-select" name="marcaCarro">
-                <option selected>Elegir marca</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Chevrolet">Chevrolet</option>
-                <option value="Fiat">Fiat</option>
-                <option value="Ford">Ford</option>
-                <option value="Otro">Otro</option>
-            </select><br>
-            <input name="precioMax" type="number" class="form-control" placeholder="Precio máximo"><br>
+            <input name="marca" type="text" class="form-control" placeholder="Marca de auto"><br>
+            <input name="Modelo" type="text" class="form-control" placeholder="Modelo del auto"><br>
+            <input name="año" type="number" class="form-control" placeholder="Año del auto"><br>
+            <input name="color" type="text" class="form-control" placeholder="Color del auto"><br>
             <div class="btn-container">
                 <input type="submit" value="Guardar" class="btn main-btn">
                 <a class="btn main-btn"  role="button">Volver</a>
