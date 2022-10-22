@@ -1,7 +1,7 @@
 <?php
 require_once 'usuario.php';
 
-class Campeon
+class carros
 {
     public $id;
     public $marca;
